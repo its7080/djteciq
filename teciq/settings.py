@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "hello",
+    'sendemail.apps.SendemailConfig', # new
 ]
 
 MIDDLEWARE = [
@@ -121,12 +122,6 @@ django_heroku.settings(locals())
 
 # Contact setup
 
-EEMAIL_BACKEND = 'django.core.mail.backend.smtp.EmailBackend'
-EMAIL_HOST_USER = ""
-EMAIL_HOST = ''
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_PASSWORD = ""
-
-
+DEFAULT_FROM_EMAIL = 'will@learndjango.com'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
