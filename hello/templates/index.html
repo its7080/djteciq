@@ -13,7 +13,7 @@
                           <h3 class="header-title wow fadeInUp">Delivering Extraordinary IT Solutions & Support Globally <span class="dot"></span></h3>
                           <div class="wow fadeInUp" data-wow-delay="0.5s"><q>We Make Sure Best Solution For Our Client</q></div>
                           <div class="wow fadeInUp" data-wow-delay="0.7s">
-                              <a href="#" class="bttn bttn-lg bttn-primary">Contact Now</a>
+                              <a href="#contact-area" class="bttn bttn-lg bttn-primary">Contact Now</a>
                           </div>
                       </div>
                   </div>
@@ -627,7 +627,7 @@
                           <li>Nine month free maintanance</li>
                 
                           <li>Dedicated Useable Account</li>
-                          <li>Over 90 Meter wiring will cost &#8377;3.5/Meter</li>
+                          <li>Over 90 Meter wiring will cost &#8377;5/Meter</li>
                       </ul>
                       <a href="#contact-area" class="bttn bttn-sm bttn-default">Contact Now</a>
                   </div>
@@ -641,7 +641,7 @@
                           <li>Nine month free maintanance</li>
               
                           <li>Dedicated Useable Account</li>
-                          <li>Over 90 Meter wiring will cost &#8377;3.5/Meter</li>
+                          <li>Over 90 Meter wiring will cost &#8377;5/Meter</li>
                       </ul>
                       <a href="#contact-area" class="bttn bttn-sm bttn-default">Contact Now</a>
                   </div>
@@ -655,7 +655,7 @@
                           <li>Nine month free maintanance</li>
                      
                           <li>Dedicated Useable Account</li>
-                          <li>Over 90 Meter wiring will cost &#8377;3.5/Meter</li>
+                          <li>Over 90 Meter wiring will cost &#8377;5/Meter</li>
                       </ul>
                       <a href="#contact-area" class="bttn bttn-sm bttn-default">Contact Now</a>
                   </div>
@@ -669,7 +669,7 @@
                           <li>Nine month free maintanance</li>
                
                           <li>Dedicated Useable Account</li>
-                          <li>Over 90 Meter wiring will cost &#8377;3.5/Meter</li>
+                          <li>Over 90 Meter wiring will cost &#8377;5/Meter</li>
                       </ul>
                       <a href="#contact-area" class="bttn bttn-sm bttn-default">Contact Now</a>
                   </div>
@@ -838,22 +838,30 @@
               </div>
           </div>
           <div class="row">
-              <div class="col-xs-12 col-md-8">
-                  <div class="contact-form">
-                      <form action="process.php" id="contact-form" method="post">
-                          <div class="form-double">
-                              <input type="text" id="form-name" name="form-name" placeholder="Full Name" required="required">
-                              <input type="tel" placeholder="Phone Number">
-                          </div>
-                          <div class="form-double">
-                              <input type="email" name="form-email" name="email" id="form-email" placeholder="Your Email" required="required">
-                              <input type="text" name="form-subject" id="form-subject" placeholder="Subject" required="required">
-                          </div>
-                          <textarea name="form-message" id="message" id="form-message" rows="5" required="required" placeholder="Message"></textarea>
-                          <button class="bttn bttn-primary">Send Now</button>
-                      </form>
-                  </div>
-              </div>
+            <div class="col-xs-12 col-md-8">
+                <div class="contact-form">
+                    <form action="{% url 'index' %}" id="contact-form" method="post" name="add_coin" onsubmit="messagesendalart()">
+                        {% csrf_token %}
+                        <div class="form-double">
+                            <input type="text" id="form-name" name="form-name" placeholder="Full Name" required="required">
+                            <input type="tel" name="form-number" placeholder="Phone Number">
+                        </div>
+                        <div class="form-double">
+                            <input type="email" name="form-email" name="email" id="form-email" placeholder="Your Email" required="required">
+                            <input type="text" name="form-subject" id="form-subject" placeholder="Subject" required="required">
+                        </div>
+                        <textarea name="form-message" id="message" id="form-message" rows="5" required="required" placeholder="Message"></textarea>
+                        <button type="submit" class="bttn bttn-primary">Send Now</button>
+                    </form>
+
+                    <script>
+                        function messagesendalart() {
+                            alert("We Recive Your Message! ");
+                        }
+                    </script>
+
+                </div>
+            </div>
               <div class="col-xs-12 col-md-4">
                   <div class="contact-info">
                       <ul class="info">
@@ -987,7 +995,7 @@
 <script src="{% static 'js/counterup.min.js' %}"></script>
 <script src="{% static 'js/easypiechart.min.js' %}"></script>
 <script src="{% static 'js/mixitup.min.js' %}"></script>
-<script src="{% static 'js/contact-form.js' %}"></script>
+
 <script src="{% static 'js/scrollUp.min.js' %}"></script>
 <script src="{% static 'js/magnific-popup.min.js' %}"></script>
 <script src="{% static 'js/wow.min.js' %}"></script>

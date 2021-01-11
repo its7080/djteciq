@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "hello",
-    'sendemail.apps.SendemailConfig', # new
 ]
 
 MIDDLEWARE = [
@@ -120,8 +119,13 @@ STATIC_URL = "/static/"
 django_heroku.settings(locals())
 
 
-# Contact setup
+# Contact setup gmail setting
 
-DEFAULT_FROM_EMAIL = 'will@learndjango.com'
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLC = True
+EMAIL_HOST_USER ='mail.teciq@gmail.com'
+EMAIL_HOST_PASSORD = '7059141480'
+
 
