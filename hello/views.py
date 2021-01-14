@@ -1,7 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse, JsonResponse
+from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.core import serializers
-from django.core.mail import message, send_mail
+from django.core.mail import message
+from django.core.mail import BadHeaderError, send_mail
+from django.conf import settings
 
 from .models import Greeting
 
