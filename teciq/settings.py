@@ -124,10 +124,11 @@ django_heroku.settings(locals())
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
-EMAIL_PORT = 58
-EMAIL_HOST_USER ='mail.teciq@gmail.com'
-EMAIL_HOST_PASSORD = '7059141480'
+EMAIL_USE_SSL = False
+EMAIL_PORT = 587
+EMAIL_HOST_USER ='4kprime@gmail.com'
+EMAIL_HOST_PASSORD = 'lepxakrjwcwojubg'
 
-
+# send_mail('test email', 'hello world', 'mail.teciq@gmail.com', ['mail.teciq@gmail.com'], fail_silently=False)
 #smtplib.SMTPSenderRefused: (530, b'5.7.0 Must issue a STARTTLS command first. g26sm16351367pfo.35 - gsmtp', 'mail.teciq@gmail.com')
 #send_mail('django test mail', 'this is dj test body', 'mail.teciq@gmail.com', ['mail.teciq@gmail.com'], fail_silently=False)
