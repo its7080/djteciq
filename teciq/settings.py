@@ -119,7 +119,7 @@ STATIC_URL = "/static/"
 django_heroku.settings(locals())
 
 
-# Contact setup gmail setting
+# Contact setup gmail setting scrap
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
